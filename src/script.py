@@ -121,5 +121,5 @@ def format_dataset(path: str) -> pd.DataFrame:
 if __name__ == '__main__':
     data = format_dataset('../data/2022-01-14-17-00_influxdb_data.csv')
     generator = ReportGenerator(data, ['M', 'Y'])   # Timeframe can be adjusted.
-    df = generator.generate_session_report().to_csv('reports/sessions.csv')
-    df2 = generator.generate_consumption_report().to_csv('reports/consumption.csv')
+    df = generator.generate_session_report().to_csv('../reports/sessions.csv')
+    df2 = generator.generate_consumption_report().to_csv('../reports/consumption.csv')
